@@ -26,9 +26,13 @@ function USAGE() {
   echo
   echo " -h --help                   Display this help message."
   echo " -b --build [options]        Build burrito iso."
-  echo " -r --run [options]          Run and go into the container."
+  echo " -r --run                    Run and go into the container."
   echo
-  echo "ex) $0 --build"
+  echo "Options"
+  echo "-------"
+  echo "vastNFS version              Default: 4.0.32"
+  echo
+  echo "ex) $0 --build 4.0.32"
   echo
 }
 if [ $# -lt 1 ]; then
@@ -46,7 +50,7 @@ do
       exit 0
       ;;
     -b | --build)
-      build
+      build "$@"
       break
       ;;
     -r | --run)

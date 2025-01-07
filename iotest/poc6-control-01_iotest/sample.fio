@@ -1,0 +1,15 @@
+[global]
+ioengine=libaio
+rw=randrw
+direct=1
+bs=4k
+runtime=120
+time_based=1
+numjobs=16
+iodepth=16
+size=5g
+group_reporting
+rwmixread=0
+rwmixwrite=100
+directory=/data/iotest/
+[write]

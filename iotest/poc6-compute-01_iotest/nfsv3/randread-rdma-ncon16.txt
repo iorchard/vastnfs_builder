@@ -1,0 +1,29 @@
+randread: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+fio-3.19
+Starting 4 processes
+
+randread: (groupid=0, jobs=4): err= 0: pid=147010: Tue Nov 26 17:17:24 2024
+  read: IOPS=413k, BW=1615MiB/s (1693MB/s)(189GiB/120002msec)
+    slat (usec): min=2, max=316, avg= 5.03, stdev= 1.48
+    clat (usec): min=100, max=44013, avg=1232.55, stdev=488.04
+     lat (usec): min=104, max=44016, avg=1237.65, stdev=488.11
+    clat percentiles (usec):
+     |  1.00th=[  611],  5.00th=[  693], 10.00th=[  734], 20.00th=[  783],
+     | 30.00th=[  832], 40.00th=[  889], 50.00th=[  996], 60.00th=[ 1532],
+     | 70.00th=[ 1631], 80.00th=[ 1713], 90.00th=[ 1795], 95.00th=[ 1876],
+     | 99.00th=[ 2114], 99.50th=[ 2442], 99.90th=[ 4146], 99.95th=[ 5080],
+     | 99.99th=[ 7177]
+   bw (  MiB/s): min=  534, max= 1701, per=100.00%, avg=1618.00, stdev=31.92, samples=956
+   iops        : min=136707, max=435548, avg=414209.20, stdev=8172.18, samples=956
+  lat (usec)   : 250=0.01%, 500=0.17%, 750=12.79%, 1000=37.41%
+  lat (msec)   : 2=47.66%, 4=1.85%, 10=0.11%, 20=0.01%, 50=0.01%
+  cpu          : usr=13.37%, sys=56.66%, ctx=11556217, majf=0, minf=1535
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=49614967,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+   READ: bw=1615MiB/s (1693MB/s), 1615MiB/s-1615MiB/s (1693MB/s-1693MB/s), io=189GiB (203GB), run=120002-120002msec

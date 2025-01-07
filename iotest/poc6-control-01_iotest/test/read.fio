@@ -1,0 +1,14 @@
+[global]
+name=read
+rw=read
+direct=1
+ioengine=libaio
+bs=64k
+numjobs=1
+iodepth=128
+size=4G
+runtime=120
+time_based=1
+group_reporting
+directory=/data/iotest/read
+[read]

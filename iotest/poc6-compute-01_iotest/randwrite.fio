@@ -1,0 +1,15 @@
+[global]
+name=randwrite
+rw=randwrite
+direct=1
+ioengine=libaio
+bs=4k
+numjobs=4
+iodepth=128
+size=4G
+runtime=120
+time_based=1
+group_reporting
+#randrepeat=0
+directory=/var/lib/nova/mnt/7470d2bb4c8c9bfec359ae9781a492ef/iotest/randwrite
+[randwrite]

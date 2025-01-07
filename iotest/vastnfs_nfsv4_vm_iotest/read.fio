@@ -1,0 +1,17 @@
+[global]
+name=read
+rw=read
+direct=1
+ioengine=libaio
+#bs=1Mi
+bs=64Ki
+numjobs=4
+iodepth=128
+size=4Gi
+runtime=120
+ramp_time=30
+time_based=1
+group_reporting
+directory=/data
+[read]
+

@@ -1,0 +1,14 @@
+[global]
+name=randread
+rw=randread
+direct=1
+ioengine=libaio
+bs=4k
+numjobs=4
+iodepth=128
+size=4G
+runtime=120
+time_based=1
+group_reporting
+directory=/srv/iotest/randread
+[randread]

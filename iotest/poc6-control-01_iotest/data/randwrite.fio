@@ -1,0 +1,16 @@
+[global]
+name=randwrite
+ioengine=libaio
+direct=1
+iodepth=32
+group_reporting
+runtime=60
+startdelay=60
+
+[randwrite]
+rw=randwrite
+bs=8k
+size=16Gb
+numjobs=8
+directory=/data/iotest/randwrite
+

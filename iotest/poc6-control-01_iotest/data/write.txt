@@ -1,0 +1,36 @@
+write: (g=0): rw=write, bs=(R) 1024KiB-1024KiB, (W) 1024KiB-1024KiB, (T) 1024KiB-1024KiB, ioengine=libaio, iodepth=32
+...
+fio-3.19
+Starting 8 processes
+write: Laying out IO file (1 file / 16384MiB)
+write: Laying out IO file (1 file / 16384MiB)
+write: Laying out IO file (1 file / 16384MiB)
+write: Laying out IO file (1 file / 16384MiB)
+write: Laying out IO file (1 file / 16384MiB)
+write: Laying out IO file (1 file / 16384MiB)
+write: Laying out IO file (1 file / 16384MiB)
+write: Laying out IO file (1 file / 16384MiB)
+
+write: (groupid=0, jobs=8): err= 0: pid=42806: Fri Nov 22 12:04:52 2024
+  write: IOPS=1396, BW=1396MiB/s (1464MB/s)(82.1GiB/60205msec); 0 zone resets
+    slat (usec): min=129, max=1028, avg=190.40, stdev=46.78
+    clat (msec): min=10, max=403, avg=183.10, stdev=19.49
+     lat (msec): min=10, max=403, avg=183.29, stdev=19.49
+    clat percentiles (msec):
+     |  1.00th=[  144],  5.00th=[  150], 10.00th=[  167], 20.00th=[  171],
+     | 30.00th=[  176], 40.00th=[  178], 50.00th=[  182], 60.00th=[  184],
+     | 70.00th=[  188], 80.00th=[  194], 90.00th=[  205], 95.00th=[  215],
+     | 99.00th=[  239], 99.50th=[  264], 99.90th=[  334], 99.95th=[  372],
+     | 99.99th=[  397]
+   bw (  MiB/s): min=  828, max= 1754, per=99.82%, avg=1393.84, stdev=13.64, samples=960
+   iops        : min=  828, max= 1754, avg=1393.82, stdev=13.64, samples=960
+  lat (msec)   : 20=0.01%, 50=0.05%, 100=0.11%, 250=99.11%, 500=0.71%
+  cpu          : usr=1.26%, sys=2.24%, ctx=89938, majf=0, minf=1879
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.2%, 32=99.7%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.1%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,84065,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
+Run status group 0 (all jobs):
+  WRITE: bw=1396MiB/s (1464MB/s), 1396MiB/s-1396MiB/s (1464MB/s-1464MB/s), io=82.1GiB (88.1GB), run=60205-60205msec

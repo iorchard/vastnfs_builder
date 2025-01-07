@@ -1,0 +1,16 @@
+[global]
+name=write
+rw=write
+direct=1
+ioengine=libaio
+#bs=1Mi
+bs=64Ki
+numjobs=1
+iodepth=128
+size=4Gi
+runtime=90
+ramp_time=30
+time_based=1
+group_reporting
+directory=/data/iotest/write
+[write]
